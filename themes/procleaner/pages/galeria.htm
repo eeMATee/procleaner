@@ -1,0 +1,36 @@
+title = "galeria"
+url = "/galeria"
+layout = "main"
+is_hidden = 0
+
+[galleryId gallery]
+idGallery = 1
+lang = "Gallery"
+jqueryinject = "no"
+thumbnail = "false"
+caption = "true"
+desc = "true"
+counter = "true"
+controls = "true"
+preload = 1
+mode = "lg-fade"
+speed = 600
+loop = "true"
+auto = "false"
+pause = 2000
+escKey = "true"
+height = 200
+width = 250
+resizer = "exact"
+==
+<body class="gallery-body">
+
+  <h4 class="gallery-title">
+    Przedstawiamy Państwu przykładowe realizacje czyszczenia tapicerki dywanów oraz wykładzin
+  </h4>
+  <div class="gallery-container">
+  
+    {% component 'gallery' %}
+  
+  </div>
+  

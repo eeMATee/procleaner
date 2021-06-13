@@ -1,0 +1,121 @@
+description = "Footer partial with contact form"
+
+[genericForm contactForm]
+group = "Kontakt"
+rules[name] = "required"
+rules[email] = "required|email"
+rules_messages[name.required] = "Podaj swoje imię."
+rules_messages[email.required] = "Adres email jest wymagany."
+rules_messages[email.email] = "Podany adres email jest nieprawidłowy."
+messages_success = "Formularz został pomyślnie wysłany. Skontaktujemy się z Tobą jak najszybciej możliwie"
+messages_errors = "Przepraszamy. Wystąpił błąd podczas składania formularza. Spróbuj ponownie lub skontaktuj się ze mną bezpośrednio."
+mail_enabled = 1
+mail_subject = "Nowa wiadomość ze strony"
+mail_recipients[] = "mateuszgrzywna@yahoo.nl"
+reset_form = 1
+inline_errors = "disabled"
+sanitize_data = "htmlspecialchars"
+anonymize_ip = "full"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+emails_date_format = "Y-m-d"
+==
+<footer class="footer">
+    <img class="svg-image svg-image-footer" src="{{ 'assets/other_images/wave(1).svg' |theme }}" alt="svg-background">
+    <h5 class="footer-title section-title">Skontaktuj się ze mną</h5>
+    <div class="footer-content">
+    
+    <form class="contact-form" data-request="{{ contactForm }}::onFormSubmit">
+
+    {{ form_token() }}
+
+    <div id="{{ contactForm }}_forms_flash"></div>
+
+    <div class="form-item">
+        <input type="text" name="name" required autocomplete="off" placeholder=" ">
+        <label for="name">
+                    <span>Imię</span>
+                </label>
+    </div>
+
+    <div class="form-item">
+        <input type="email" name="email" required autocomplete="off" placeholder=" ">
+        <label for="email">
+                    <span>Email</span>
+                </label>
+    </div>
+
+    <div class="form-item">
+        <input type="text" name="phone" autocomplete="off" placeholder=" ">
+        <label for="phone">
+                    <span>Telefon</span>
+                </label>
+    </div>
+
+    <div class="form-item">
+        <textarea rows="8" type="text" wrap="on" class="textarea" name="message" autocomplete="off" placeholder=" "></textarea>
+        <label for="message">
+                    <span>Wiadomość</span>
+                </label>
+    </div>
+
+    <button class="contact-form-button">Wyślij</button>
+
+</form>
+        <!-- <form class="contact-form" method="POST" name="contact-form" action="/php/contact-form/php">
+
+            <div class="form-item">
+                <input type="text" name="name_contact" required autocomplete="off" placeholder=" ">
+                <label for="name_contact">
+                            <span>Imię</span>
+                        </label>
+            </div>
+
+            <div class="form-item">
+                <input type="email" name="email_contact" required autocomplete="off" placeholder=" ">
+                <label for="email_contact">
+                            <span>Email</span>
+                        </label>
+            </div>
+
+            <div class="form-item">
+                <input type="text" name="phone_contact" autocomplete="off" placeholder=" ">
+                <label for="phone_contact">
+                            <span>Telefon</span>
+                        </label>
+            </div>
+
+            <div class="form-item">
+                <textarea rows="8" type="text" wrap="on" class="textarea" name="message_contact" autocomplete="off" placeholder=" "></textarea>
+                <label for="message_contact">
+                            <span>Wiadomość</span>
+                        </label>
+            </div>
+
+            <button class="contact-form-button">Wyślij</button>
+
+
+        </form> -->
+        
+        
+        <div class="info">
+            <div class="info-container">
+                <div class="info-small-square"></div>
+                <h6 class="info-title">Info</h6>
+                <div class="info-phone info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <a href="tel:+49 123456789" class="info-text">+49 123456789</a>
+                </div>
+                <div class="info-mail info-item">
+                    <i class="fas fa-envelope"></i>
+                    <h6 class="info-text">info@cleaning.com</h6>
+                </div>
+                <div class="info-facebook info-item">
+                    <i class="fab fa-facebook-f"></i>
+                    <h6 class="info-text">facebook.com/cleaning</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

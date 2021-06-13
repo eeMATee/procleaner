@@ -1,0 +1,45 @@
+description = "Navbar partial"
+==
+
+<nav class="menu">
+    <ul class="hide-for-mobile">
+        <li><a href="#">Start</a></li>
+        <li><a href="#">Oferta</a></li>
+        <li><a href="#">Galeria</a></li>
+        <li class="logo-container"><img src="{{'pngwing.com.png' |media }}" class="logo-img" alt="logo"></li>
+        <li><a href="#">Cennik</a></li>
+        <li><a href="#">Pytania</a></li>
+        <li><a href="#">Kontakt</a></li>
+    </ul>
+</nav>
+
+{# Mobile nav #}
+<div class="container-mobile-nav">
+	<button id="burger" class="open-main-nav">
+		<span class="burger"></span>
+		<span class="burger-text">Menu</span>
+		<span class="burger-text-close">Zamknij</span>
+	</button>
+	<nav class="main-nav" id="main-nav">
+		<ul>
+			<li>
+				<a href="#" class="mobile-menu-links">Strona główna</a>
+			</li>
+			<li>
+				<a href="#offert-section" class="mobile-menu-links">Oferta</a>
+			</li>
+			<li>
+				<a href="#effects-section" class="mobile-menu-links">Galeria</a>
+			</li>
+			<li>
+				<a href="#pricing-section" class="mobile-menu-links">Cennik</a>
+			</li>
+			<li>
+				<a href="#faq-section" class="mobile-menu-links">Często zadawane<br>pytania</a>
+			</li>
+			<li>
+				<a href="#contact-section" class="mobile-menu-links">Kontakt</a>
+			</li>
+		</ul>
+	</nav>
+</div>

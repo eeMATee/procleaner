@@ -1,0 +1,435 @@
+title = "home"
+url = "/"
+layout = "main"
+description = "Main Page"
+is_hidden = 0
+
+[genericForm contactForm]
+group = "Formularz Kontaktowy"
+rules[name] = "required"
+rules[email] = "required|email"
+rules_messages[name.required] = "Imię jest wymagane."
+rules_messages[email.required] = "Email jest wymagany."
+rules_messages[email.email] = "Podany email jest nieprawidłowy."
+messages_success = "Your form was successfully submitted"
+messages_errors = "There were errors with your submission"
+mail_enabled = 0
+mail_subject = "Nowa wiadomość na stronie."
+mail_recipients[] = "mateuszgrzywna@yahoo.nl"
+inline_errors = "disabled"
+allowed_fields[] = "name"
+allowed_fields[] = "email"
+allowed_fields[] = "phone"
+allowed_fields[] = "message"
+sanitize_data = "htmlspecialchars"
+anonymize_ip = "full"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+emails_date_format = "Y-m-d"
+==
+<body class="main-page-body">
+<!-- Navbar Partial  -->
+{% partial 'header' %}
+
+<!-- --**/--\**----**/--\**----**/-|+| BAR WHY US? |+|-\**----**/--\**----**/--\**-- -->
+<section class="why-us"  id="why-us-section">
+    <img class="why-us-image1" src="{{ 'kisspng-world-map-globe-dotted-world-map-5a709b93a555f7.1954883515173292996772.png' |media}}" alt="why-us-background">
+    <img class="why-us-image2" src="{{ '5a2a3b77e5a828.6138149515127171759407.png' |media}}" alt="why-us-background">
+    <div class="why-us-content">
+        <H4 class="why-us-title section-title ">Dlaczego my?</H4>
+        <div class="why-us-cards">
+            <!-- Item 1 -->
+            <div class="card-1">
+                <img class="icon" src="{{ '/assets/other_images/checked.svg' | theme}}" alt="icon">
+                <p>100%</p>
+                <p>Zadowolonych<br>klientów</p>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="card-2">
+                <img class="icon" src="{{ '/assets/other_images/car.svg' | theme}}" alt="icon">
+                <p>0 zł</p>
+                <p>Dojazd do<br>klienta</p>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="card-3">
+                <img class="icon" src="{{ '/assets/other_images/favorites.svg' | theme}}" alt="icon">
+                <p>100%</p>
+                <p>Profesjonalny<br>sprzet</p>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="card-4">
+                <img class="icon" src="{{ '/assets/other_images/trophy.svg' | theme}}" alt="icon">
+                <p>421</p>
+                <p>Klientów<br>w tym roku</p>
+            </div>
+        </div>
+    </div>
+    
+</section>
+
+<!-- --**/--\**----**/--\**----**/-|+| WHAT WE DO |+|-\**----**/--\**----**/--\**-- -->
+<section class="what-we-do" id="offert-section">
+    <img class="svg-image svg-image-what-we-do-top" src="{{ 'assets/other_images/wave-lighter.svg' |theme }}" alt="svg-background">
+    <img src="{{ 'carpet-cleaning-1024x673black.png' |media}}" alt="background" class="what-we-do-image">
+    <div class="what-we-do-content">
+        <h4 class="what-we-do-title section-title ">Czym sie zajmujemy</h4>
+        <div class="what-we-do-cards">
+            <div class="card">
+                <p>Pranie<br> sof i kanap</p>
+                <img src="{{ 'Czyszczenie-kanapy-card1.jpg' |media }}" alt="what-we-do-image-showcase">
+            </div>
+            <div class="card">
+                <p>Ozonowanie<br>materiału</p>
+                <img src="{{ 'ozonowanie.jpg' |media }}" alt="what-we-do-image-showcase">
+            </div>
+            <div class="card">
+                <p>Czyszczenie<br> łazienki i kuchni</p>
+                <img src="{{ 'lazieniki.jpg' |media }}" alt="what-we-do-image-showcase">
+            </div>
+            <div class="card">
+                <p>Pranie<br> dywanow</p>
+                <img src="{{ 'pranie dywanow.jpg' |media}}" alt="what-we-do-image-showcase">
+            </div>
+            <div class="card">
+                <p>Pranie<br> foteli i krzesel</p>
+                <img src="{{ 'pranie krzesel.jpg' |media}}" alt="what-we-do-image-showcase">
+            </div>
+            <div class="card">
+                <p>Pranie tapicerki <br>samochodowej</p>
+                <img src="{{ 'pranie auto.jpg' |media}}" alt="what-we-do-image-showcase">
+            </div>
+        </div>
+        <button class="main-button">Dowiedz sie wiecej</button>
+    </div>
+    <img class="svg-image svg-image-what-we-do" src="{{ 'assets/other_images/wave(1).svg' |theme }}" alt="svg-background">
+</section>
+
+<!-- --**/--\**----**/--\**----**/-|+| THE EFFECTS OF OUR WORK |+|-\**----**/--\**----**/--\**-- -->
+<section class="the-effects-of-our-work"  id="effects-section">
+    <div class="the-effects-of-our-work-content">
+
+        <h4 class="the-effects-of-our-work-title section-title ">Efekty naszej pracy</h4>
+        <div class="slider-container">
+            <!-- First Image slider -->
+            <div class="comparison-slider-wrapper">
+
+                <div class="comparison-slider">
+                    <div class="overlay">Zdjecie <strong>przed</strong></div>
+                    <img src="{{ 'Carpet-Cleaning1.jpg' |media}}" alt="cleaning effects before">
+                    <div class="resize">
+                        <div class="overlay">Zdjęcie <strong>po</strong></div>
+                        <img src="{{ 'Carpet-Cleaning2.jpg' |media}}" alt="cleaning effects after">
+                    </div>
+                    <div class="divider"></div>
+                </div>
+            </div>
+            <!-- Second Image Slider -->
+            <div class="comparison-slider-wrapper">
+                <!-- Comparison Slider - this div contain the slider with the individual images captions -->
+                <div class="comparison-slider">
+                    <div class="overlay">Zdjecie <strong>przed</strong></div>
+                    <img src="{{ 'kanapa-przed.png' |media}}" alt="cleaning effects before">
+                    <!-- Div containing the image layed out on top from the left -->
+                    <div class="resize">
+                        <div class="overlay">Zdjęcie <strong>po</strong></div>
+                        <img src="{{ 'kanapa-po.png' |media}}" alt="cleaning effects after">
+                    </div>
+                    <!-- Divider where user will interact with the slider -->
+                    <div class="divider"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <button class="main-button">Zobacz pełną galerię</button>
+    </div>
+</section>
+
+<!-- --**/--\**----**/--\**----**/-|+| EXAMPLE PRICES |+|-\**----**/--\**----**/--\**-- -->
+<section class="example-prices" id="pricing-section">
+    <img class="example-prices-image" src="{{ 'yellow-modern-vacuum-cleaner-in-living-room.jpg' |media}}" alt="section background">
+    <div class="example-prices-content">
+        <h4 class="example-prices-title section-title ">Cennik</h4>
+        <div class="example-prices-cards">
+            <div class="inner-cards">
+                <div class="border"></div>
+                <img src="{{ '/assets/other_images/carpet.svg' | theme }}" alt="pricing-icon">
+                <div>
+                    <h6>Dywan</h6>
+                    <p>25 - 30 € </p>
+                </div>
+            </div>
+            <div class="inner-cards">
+                <div class="border"></div>
+                <img src="{{ '/assets/other_images/sofa.svg' | theme }}" alt="pricing-icon">
+                <div>
+                    <h6>Kanapa</h6>
+                    <p>45 - 85 €</p>
+                </div>
+            </div>
+            <div class="inner-cards">
+                <div class="border"></div>
+                <img src="{{ '/assets/other_images/chair.svg' | theme }}" alt="pricing-icon">
+                <div>
+                    <h6>Krzeslo</h6>
+                    <p>7 - 10 €</p>
+                </div>
+            </div>
+            <div class="inner-cards">
+                <div class="border"></div>
+                <img src="{{ '/assets/other_images/living-room.svg' | theme }}" alt="pricing-icon">
+                <div>
+                    <h6>Fotel</h6>
+                    <p>15 - 25 €</p>
+                </div>
+            </div>
+            <div class="inner-cards">
+                <div class="border"></div>
+                <img src="{{ '/assets/other_images/bed.svg' | theme }}" alt="pricing-icon">
+                <div>
+                    <h6>Materac</h6>
+                    <p>od 50 €</p>
+                </div>
+            </div>
+            <div class="inner-cards">
+                <div class="border"></div>
+                <img src="{{ '/assets/other_images/car2.svg' | theme }}" alt="pricing-icon">
+                <div>
+                    <h6>Auto tapicerka</h6>
+                    <p>75 - 130 €</p>
+                </div>
+            </div>
+        </div>
+        {# <button class="main-button">Pelny cennik</button> #}
+    </div>
+    <img class="svg-image svg-image-pricing" src="{{ 'assets/other_images/wave(1).svg' |theme }}" alt="svg-background">
+    <img class="svg-image svg-image-pricing2" src="{{ 'assets/other_images/wave(1).svg' |theme }}" alt="svg-background">
+
+</section>
+
+<!-- --**/--\**----**/--\**----**/-|+| FIVE STEPS CLEANING |+|-\**----**/--\**----**/--\**-- -->
+<section class="five-steps-cleaning" id="five-steps-section">
+    <img src="{{ 'Wstawka tlo-zolte.png' |media }}" class="five-steps-image" alt="backgroun-image">
+    <div class="five-steps-content">
+        <h4 class="five-steps-title section-title ">5-etapowy proces czyszczenia</h4>
+        <div class="timeline">
+            <div class="container left">
+                <div class="date">Krok 1</div>
+                <div class="content">
+                    <div class="date-inner">Krok 1</div>
+                    <h2>Lorem ipsum dolor sit amet</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium. Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+                    </p>
+                </div>
+            </div>
+            <div class="container right">
+                <div class="date">Krok 2</div>
+                <div class="content">
+                    <div class="date-inner">Krok 2</div>
+                    <h2>Lorem ipsum dolor sit amet</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+                    </p>
+                </div>
+            </div>
+            <div class="container left">
+                <div class="date">Krok 3</div>
+                <div class="content">
+                    <div class="date-inner">Krok 3</div>
+                    <h2>Lorem ipsum dolor sit amet</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+                    </p>
+                </div>
+            </div>
+            <div class="container right">
+                <div class="date">Krok 4</div>
+                <div class="content">
+                    <div class="date-inner">Krok 4</div>
+                    <h2>Lorem ipsum dolor sit amet</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+                    </p>
+                </div>
+            </div>
+            <div class="container left">
+                <div class="date">Krok 5</div>
+                <div class="content">
+                    <div class="date-inner">Krok 5</div>
+                    <h2>Lorem ipsum dolor sit amet</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img class="svg-image-five-steps-bottom" src="{{ 'assets/other_images/wave(1).svg' |theme }}" alt="svg-background">
+</section>
+
+<!-- --**/--\**----**/--\**----**/-|+| FAQ |+|-\**----**/--\**----**/--\**-- -->
+<section class="faq" id="faq-section">
+
+    <img src="{{'carpet-hair.webp' |media }}" alt="faq-background" class="faq-background-image">
+    <div class="faq-content">
+        <div class="faq-title section-title">Najczęściej zadawane pytania</div>
+        <div class="accordion-item">
+            <div class="accordion-item-header active">
+                Ile zajmuje pranie kanapy ?
+            </div>
+            <div class="accordion-item-body" style="max-height: 104px;">
+                <div class="accordion-item-body-content">
+                    Web Development broadly refers to the tasks associated with developing functional websites and applications for the Internet. The web development process includes web design, web content development, client-side/server-side scripting and network security
+                    configuration, among other tasks.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-item-header">
+                Czy używanie środków czyszczących jest bezpieczne dla zwierząt ?
+            </div>
+            <div class="accordion-item-body">
+                <div class="accordion-item-body-content">
+                    HTML, aka HyperText Markup Language, is the dominant markup language for creating websites and anything that can be viewed in a web browser.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-item-header">
+                Jak przygotować materiał do czyszczenia ?
+            </div>
+            <div class="accordion-item-body">
+                <div class="accordion-item-body-content">
+                    HTML, aka HyperText Markup Language, is the dominant markup language for creating websites and anything that can be viewed in a web browser.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-item-header">
+                Po jakim czasie można używać ponownie tapicerki?
+            </div>
+            <div class="accordion-item-body">
+                <div class="accordion-item-body-content">
+                    HTTP, aka HyperText Transfer Protocol, is the underlying protocol used by the World Wide Web and this protocol defines how messages are formatted and transmitted, and what actions Web servers and browsers should take in response to various commands.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-item-header">
+                Jak dbać o materiał po czyszczeniu ?
+            </div>
+            <div class="accordion-item-body">
+                <div class="accordion-item-body-content">
+                    CORS, aka Cross-Origin Resource Sharing, is a mechanism that enables many resources (e.g. images, stylesheets, scripts, fonts) on a web page to be requested from another domain outside the domain from which the resource originated.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Footer -->
+<footer class="footer">
+    <img class="svg-image svg-image-footer" src="{{ 'assets/other_images/wave(1).svg' |theme }}" alt="svg-background">
+    <h5 class="footer-title section-title">Skontaktuj się ze mną</h5>
+    <div class="footer-content">
+    
+    <form class="contact-form" data-request="{{ contactForm }}::onFormSubmit">
+
+    {{ form_token() }}
+
+    <div id="{{ contactForm }}_forms_flash" class="form-status"></div>
+
+    <div class="form-item">
+        <input type="text" name="name" required autocomplete="off" placeholder=" ">
+        <label for="name">
+                    <span>Imię</span>
+                </label>
+    </div>
+
+    <div class="form-item">
+        <input type="email" name="email" required autocomplete="off" placeholder=" ">
+        <label for="email">
+                    <span>Email</span>
+                </label>
+    </div>
+
+    <div class="form-item">
+        <input type="text" name="phone" autocomplete="off" placeholder=" ">
+        <label for="phone">
+                    <span>Telefon</span>
+                </label>
+    </div>
+
+    <div class="form-item">
+        <textarea rows="8" type="text" wrap="on" class="textarea" name="message" autocomplete="off" placeholder=" "></textarea>
+        <label for="message">
+                    <span>Wiadomość</span>
+                </label>
+    </div>
+
+    <button class="contact-form-button">Wyślij</button>
+
+</form>
+        <!-- <form class="contact-form" method="POST" name="contact-form" action="/php/contact-form/php">
+
+            <div class="form-item">
+                <input type="text" name="name_contact" required autocomplete="off" placeholder=" ">
+                <label for="name_contact">
+                            <span>Imię</span>
+                        </label>
+            </div>
+
+            <div class="form-item">
+                <input type="email" name="email_contact" required autocomplete="off" placeholder=" ">
+                <label for="email_contact">
+                            <span>Email</span>
+                        </label>
+            </div>
+
+            <div class="form-item">
+                <input type="text" name="phone_contact" autocomplete="off" placeholder=" ">
+                <label for="phone_contact">
+                            <span>Telefon</span>
+                        </label>
+            </div>
+
+            <div class="form-item">
+                <textarea rows="8" type="text" wrap="on" class="textarea" name="message_contact" autocomplete="off" placeholder=" "></textarea>
+                <label for="message_contact">
+                            <span>Wiadomość</span>
+                        </label>
+            </div>
+
+            <button class="contact-form-button">Wyślij</button>
+
+
+        </form> -->
+        
+        
+        <div class="info">
+            <div class="info-container">
+                <div class="info-small-square"></div>
+                <h6 class="info-title">Info</h6>
+                <div class="info-phone info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <a href="tel:+49 123456789" class="info-text">+49 123456789</a>
+                </div>
+                <div class="info-mail info-item">
+                    <i class="fas fa-envelope"></i>
+                    <h6 class="info-text">info@cleaning.com</h6>
+                </div>
+                <div class="info-facebook info-item">
+                    <i class="fab fa-facebook-f"></i>
+                    <h6 class="info-text">facebook.com/cleaning</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
